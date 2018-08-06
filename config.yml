@@ -2,4 +2,4 @@ hostname: httpbin.chriswang.tech
 url: http://localhost:80
 logfile: /var/log/cloudflared.log
 compression-quality: 1
-metrics: 8000
+metrics: 0.0.0.0:8080

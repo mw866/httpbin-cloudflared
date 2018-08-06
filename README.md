@@ -29,13 +29,23 @@ cloudflared --version
 cloudflared login
 ```
 
-* Run `cloudflared`: 
+* Run `cloudflared` one-off
 ```
 cloudflared --config ~/httpbin-cloudflared/config.yml
 ```
 
+* Run `cloudflared` as a service
+
+```
+ln -s ~/httpbin-cloudflared/config.yml /etc/cloudflared/config.yml
+scloudflared service install
+service cloudflared start
+```
+
+## TODO
+* Expose /metrics 
 
 
 ## References
-[httpbin on Dockerhub](https://hub.docker.com/r/kennethreitz/httpbin/)
-[Developers docs for Argo Tunnel aka `cloudflared`](https://developers.cloudflare.com/argo-tunnel/downloads/)
+* [httpbin on Dockerhub](https://hub.docker.com/r/kennethreitz/httpbin/)
+* [Developers docs for Argo Tunnel aka `cloudflared`](https://developers.cloudflare.com/argo-tunnel/downloads/)
